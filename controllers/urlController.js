@@ -23,7 +23,7 @@ module.exports = {
     if (url) {
       res.redirect(url.fullUrl);
     } else {
-      res.status(404).send({ error: 'Url not found' });
+      res.redirect(`${process.env.APP_URL}/404`);
     }
   },
 
